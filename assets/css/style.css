@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+article p{
+    font-size: 17px;
+    line-height: 22px;
+    margin: 8px 0;
+}
+table th,td{
+    padding: 5px;
+    text-align: justify;
+}
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    padding: 20px;
+    text-align: justify;
+    background-color: white;
+    margin-bottom: 20px;
+}
+.cards{
+    display: flex;
+    flex-grow: 1;
+}
+.cards section{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    padding: 20px;
+    text-align: justify;
+    background-color: rgb(230, 230, 230);
+    margin: 10px;
+    flex-basis: 33%;
+}
+.cards section img{
+    width: 100%;
+    height: 150px;
+    margin: 10px 0;
+}
+header h1{
+    font-size: 2em;
+    padding: 80px;
+    background-color: #0a81ab;
+    text-align: center;
+    color: white;
+}
+h2{
+    font-size: 1.5em;
+    padding: 20px;
+    background-color: #0a81ab;
+    text-align: center;
+    color: white;
+}
+main{
+    display: flex;
+    padding: 20px;
+}
+.kiri{
+    flex-basis: 20%;
+    order: 1;
+    margin-right: 25px;
+}
+.kanan{
+    flex-basis: 20%;
+    order: 3;
+    margin-left: 25px;
+}
+.kanan nav{
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+.kanan nav a {
+    display: block;
+    padding: 10px;
+    list-style: none;
+    margin-bottom: 15px;
+    background-color: #00c8eb;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white
+}
+.kanan nav a:hover{
+    background-color: #06a3be;
+    font-weight: 600;
+}
+aside header{
+    text-align: center;
+}
+#content{
+    flex-basis: 60%;
+    order: 2;
+}
+.profile-picture{
+    border-radius: 45%;
+    width: 40%;
+    transition: all 500ms;
+}
+.profile-picture:hover{
+    transform: scale(250%);
+}
+#mySkill section{
+    display: flex;
+    flex-direction: column;
+}
+.skill-name{
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+  .skill-bar{
+    height: 20px;
+    background: #cacaca;
+    border-radius: 8px;
+}
+  .skill-per{
+    height: 20px;
+    background-color: #4aa96c;
+    border-radius: 8px;
+    width: 0;
+    transition: 1s linear;
+    position: relative;
+}
+  .skill-per::before{
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+    top: -35px;
+    right: 0;
+    transform: translateX(50%);
+}
+  .skill-per::after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    top: -16px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+    border-radius: 2px;
+}
+#sosmed section {
+    display: flex;
+    justify-content: space-evenly;
+}
+section figure{
+    text-align: center;
+}
+section figure img{
+    transition: all 500ms;
+    margin-top: 20px;
+    width: 100px;
+}
+section figure img:hover{
+    transform: scale(115%);
+}
+footer{
+    padding: 40px;
+    font-size: 1.2em;
+    background-color: #005f99;
+    text-align: center;
+    width: 100%;
+    color: white;
+}
+
+footer p:nth-child(2){
+    color: rgb(255, 199, 44);
+    margin-top: 10px;
+}
+
+/* MOBILE */
+@media (max-width:500px){
+main{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: 100%;
+}
+#content{
+    flex-basis: 100%;
+    order: 2;
+}
+.kiri{
+    flex-basis: 100%;
+    order: 3;
+    margin: 4px 0 4px 0;
+}
+.kanan{
+    flex-basis: 100%;
+    order: 1;
+    margin: 0;
+}
+.kanan .card{
+    width: 100%;
+}
+.kanan nav{
+    padding: 15px;
+    margin-bottom: 5px;
+    background-color: #00c8eb;
+}
+.kanan nav a{
+    display: inline;
+    margin: 0;
+    border-radius: 0;
+    margin-right: 5px;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+}
+.cards section{
+    flex-basis: 100%;
+}
+}
+/* TAB */
+@media (max-width:916px){
+    main{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+        width: 100%;
+    }
+    #content{
+        flex-basis: 100%;
+        order: 2;
+    }
+    .kiri{
+        flex-basis: 100%;
+        order: 3;
+        margin: 4px 0 4px 0;
+    }
+    .kanan{
+        flex-basis: 100%;
+        order: 1;
+        margin: 0;
+    }
+    .kanan .card{
+        width: 100%;
+    }
+    .kanan nav{
+        padding: 15px;
+        margin-bottom: 5px;
+        background-color: #00c8eb;
+    }
+    .kanan nav a{
+        display: inline;
+        margin: 0;
+        border-radius: 0;
+        margin-right: 5px;
+    }
+    .cards{
+        display: flex;
+    }
+    .cards section{
+        flex-basis: 100%;
+    }
+    }
